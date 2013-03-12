@@ -41,11 +41,11 @@ class Comment extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('content, author, email', 'required'),
-			array('author, email, url', 'length', 'max'=>128),
-			array('email','email'),
-			array('url','url'),
-		);
+	        array('content, author, email', 'required'),
+	        array('author, email, url', 'length', 'max'=>128),
+	        array('email','email'),
+	        array('url','url'),
+	    );
 	}
 
 	/**
@@ -66,7 +66,7 @@ class Comment extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'Id',
+	        'id' => 'Id',
 	        'content' => 'Comment',
 	        'status' => 'Status',
 	        'create_time' => 'Create Time',
@@ -74,7 +74,7 @@ class Comment extends CActiveRecord
 	        'email' => 'Email',
 	        'url' => 'Website',
 	        'post_id' => 'Post',
-		);
+	    );
 	}
 
 	/**
