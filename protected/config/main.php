@@ -18,6 +18,8 @@ return array(
 		'application.components.*',
 	),
 
+	'defaultController'=>'post',
+
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 		
@@ -47,9 +49,14 @@ return array(
 			),
 		),
 		*/
+		'cache'=>array(
+            'class'=>'CDbCache',
+        ),
 		'db'=>array(
+			'class'=>'system.db.CDbConnection',
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/blog.db',
-		'tablePrefix'=>'tbl_',
+			'tablePrefix'=>'tbl_',
+			'schemaCachingDuration'=>3600,
 		),
 		// uncomment the following to use a MySQL database
 		/*
